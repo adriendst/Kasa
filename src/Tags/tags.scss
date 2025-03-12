@@ -1,0 +1,30 @@
+.tags {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+
+    .tag {
+        box-sizing: border-box;
+        padding: 0 10px;
+        min-width: 115px;
+        height: 25px;
+        background-color: rgba(255, 96, 96, 1);
+        color: white;
+        border-radius: 10px;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tags {
+        margin-top: 10px;
+        .tag {
+            min-width: 84px;
+            height: 18px;
+            font-size: 10px;
+        }
+    }
+}

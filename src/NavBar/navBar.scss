@@ -1,0 +1,38 @@
+.navBar {
+    padding: 20px 45px;
+    display: flex;
+    justify-content: space-between;
+
+    .navBarLinks {
+        display: flex;
+        align-items: center;
+        gap: 57px;
+
+        .notActive{
+            text-decoration: none;
+        }
+
+        .navBarLink {
+            font-weight: 500;
+            font-size: 24px;
+            color: black;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navBar{
+        padding : 20px;
+        .navImg{
+            width: 145px;
+        }
+
+        .navBarLinks{
+            gap : 26px;
+            .navBarLink{
+                font-size: 12px;
+                text-transform: uppercase;
+            }
+        }
+    }
+      }

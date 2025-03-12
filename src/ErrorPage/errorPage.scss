@@ -1,0 +1,37 @@
+.errorPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    .errorNumber {
+        font-size: 288px;
+        color: rgba(255, 96, 96, 1);
+        margin : 0
+    }
+
+    .errorMessage{
+        font-size: 36px;
+        color: rgba(255, 96, 96, 1);
+        margin-bottom: 0px;
+    }
+
+    .homeLink{
+        font-size: 18px;
+        color: black;
+        margin : 60px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .errorPage{
+        gap : 50px;
+        padding : 20px 0;
+        .errorNumber{
+            font-size: 96px;
+        }
+        .errorMessage{
+            padding : 0 45px;
+            text-align: center;
+        }
+    }
+}

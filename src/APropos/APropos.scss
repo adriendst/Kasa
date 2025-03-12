@@ -1,0 +1,14 @@
+.aProposPage {
+    padding: 0 45px;
+    flex-grow: 1;
+
+    .AboutDropDown {
+        margin-top: 45px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .aProposPage {
+        padding: 0 20px;
+    }
+}

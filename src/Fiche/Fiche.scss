@@ -1,0 +1,101 @@
+.fiche {
+    padding: 0 45px;
+    flex-grow: 1;
+
+    .section {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        gap: 50px;
+
+        .title {
+            max-width: 60%;
+
+            .locationTitle {
+                font-size: 36px;
+                color: rgba(255, 96, 96, 1);
+                margin: 0;
+            }
+
+            .locationLocation {
+                font-size: 18px;
+            }
+        }
+
+        .hostInfo {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .host {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .hostName {
+                    font-size: 18px;
+                    color: rgba(255, 96, 96, 1);
+                    max-width: 60%;
+                    direction: rtl;
+                }
+
+                .hostPicture {
+                    width: 64px;
+                    height: 64px;
+                    object-fit: cover;
+                    border-radius: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .fiche {
+        padding: 0 20px;
+
+        .section {
+            flex-direction: column;
+            gap: 0px;
+            margin-bottom: 15px;
+
+            .title {
+                max-width: 100%;
+
+                .locationTitle {
+                    font-size: 18px;
+                }
+
+                .locationLocation {
+                    font-size: 14px;
+                }
+            }
+
+            .hostInfo {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+
+                .host {
+                    .hostName {
+                        font-size: 12px;
+                    }
+
+                    .hostPicture {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+
+                .rating {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

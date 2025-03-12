@@ -1,0 +1,72 @@
+.home {
+    padding: 0px 45px;
+
+    .locations {
+        background-color: rgba(246, 246, 246, 1);
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        margin: 40px 0;
+        padding: 40px 0;
+        gap: 10%;
+        flex-wrap: wrap;
+
+        .locationCard {
+            height: 340px;
+            width: 340px;
+            margin-bottom: 40px;
+            position: relative;
+
+            .locationTitle{
+                z-index: 5;
+            }
+
+            .linearBackground{
+                position : absolute;
+                width : 100%;
+                height: 100%;
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
+                border-radius: 10px;
+            }
+
+            .locationImg {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                position: absolute;
+            }
+
+            h3 {
+                font-size: 18px;
+                font-weight: 700;
+                width: 300px;
+                left: 20px;
+                position: absolute;
+                bottom: 0;
+                color: white;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .home {
+        padding: 0 20px;
+
+        .locations {
+            background-color: unset;
+            margin: 20px 0;
+            padding: unset;
+
+            .locationCard {
+                margin-bottom: 20px;
+                height: 225px;
+                min-width: 75%;
+                width: 340px;
+            }
+        }
+
+    }
+}

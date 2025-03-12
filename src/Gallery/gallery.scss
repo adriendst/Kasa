@@ -1,0 +1,53 @@
+.locationImages {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    .arrow {
+        padding: 20px;
+        position: absolute;
+    }
+
+    .beforeArrow {
+        transform: rotate(180deg);
+    }
+
+    .nextArrow {
+        right: 0;
+    }
+
+    .locationCover {
+        border-radius: 25px;
+        object-fit: cover;
+        width: 100%;
+        height: 415px;
+    }
+
+    .pictureNumber {
+        position: absolute;
+        bottom: 15px;
+        right: 50%;
+        left: 50%;
+        color: white;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .locationImages {
+        margin-bottom: 20px;
+
+        .locationCover {
+            max-height: 255px;
+        }
+
+        .arrow {
+            height: 20px;
+        }
+
+        .pictureNumber {
+            display: none;
+        }
+    }
+}
