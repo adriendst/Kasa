@@ -1,19 +1,18 @@
-import { Outlet } from "react-router-dom"
-import NavBar from "../NavBar/navBar"
-import Footer from "../Footer/Footer"
-import './Root.scss'
-
+import { Outlet, useLocation } from "react-router-dom";
+import Footer from "../Footer/Footer";
+import NavBar from "../NavBar/navBar";
+import "./Root.scss";
 
 function Root() {
+    const location = useLocation();
 
     return (
         <div>
-            <NavBar />
+            {location.pathname !== "/error" && <NavBar />}
             <Outlet />
-            <Footer/>
+            {location.pathname !== "/error" && <Footer />}
         </div>
-
-    )
+    );
 }
 
-export default Root
+export default Root;

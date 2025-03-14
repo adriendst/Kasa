@@ -13,7 +13,6 @@ function ErrorPage() {
         <p className="errorMessage">Oups! La page que vous demandez n'existe pas.</p>
         <Link to='/home' className="homeLink">Retourner sur la page d’accueil</Link>
       </div>
-
       <Footer />
     </div>
   )

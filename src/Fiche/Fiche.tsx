@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Dropdown from "../Dropdown/Dropdown";
 import Gallery from "../Gallery/gallery";
 import Rating from "../Rating/rating";
@@ -39,13 +39,22 @@ function Fiche() {
         tags: [],
     });
 
-    const ficheId = useParams().ficheId;
+    const { ficheId } = useParams();
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch("/data/data.json")
             .then((response) => response.json())
-            .then((data) => data.filter((data: any) => data.id === ficheId))
-            .then((data) => setLocation(data[0]));
+            .then((data) => {
+                const foundLocation = data.find((item: any) => item.id === ficheId);
+                if (!foundLocation) {
+                    navigate("/error");
+                } else {
+                    setLocation(foundLocation);
+                }
+            })
+            .catch(() => navigate("/error"));
     }, []);
 
     return (
